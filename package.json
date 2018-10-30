@@ -1,0 +1,23 @@
+{
+  "name": "upload-plain",
+  "version": "1.0.0",
+  "description": "upload data to ipfs",
+  "main": "index.js",
+  "scripts": {
+    "watch": "watchify index.js -o bundle.js -v",
+    "build": "browserify index.js -o bundle.js",
+    "start": "npm run watch & nodemon server.js"
+  },
+  "author": "melanie",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "ipfs-api": "^25.0.0",
+    "mustard-ui": "0.0.8"
+  },
+  "devDependencies": {
+    "browserify": "^16.2.3",
+    "nodemon": "^1.18.4",
+    "watchify": "^3.11.0"
+  }
+}

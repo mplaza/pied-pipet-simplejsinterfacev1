@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Blockchainify Your Data</title>
+    <script src="bundle.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/mustard-ui@latest/dist/css/mustard-ui.min.css">
+    <style>
+        .content {
+            border: 1px solid black;
+            padding: 10px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- upload info to ipfs and blockchain -->
+    <div class="row">
+        <div class="col col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+            <h2 class="align-center">
+                Upload Your Results
+            </h2>
+            <div class="form-control">
+                <label>Study ID</label>
+                <input id="studyid" type="text" placeholder="Enter unique identifier">
+            </div>
+            <div class="form-control">
+                <label>Data</label>
+                <textarea id="source" placeholder="Enter some data"></textarea>
+            </div>
+            <br />
+            <button id="store" class="button-primary-outlined" style="width:100%">Upload</button>
+            <div>
+                <div>stored in ipfs:</div>
+                <div class="content" id="hash">[ipfs hash]</div>
+                <div class="content" id="content">[ipfs content]</div>
+            </div>
+            <div>
+                <div>timestamped and mapped on blockchain:</div>
+                <div class="content" class="transaction-hash" id="txHash">[txHash]</div>
+            </div>
+        </div>
+    </div>
+    <!-- see results from contract -->
+    <div class="row">
+        <div class="col col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+            <h2 class="align-center">
+                See Results
+            </h2>
+            <div class="form-control">
+                <label>Study ID</label>
+                <input id="studyidlookup" type="text" placeholder="Enter unique identifier">
+            </div>
+            <br />
+            <button id="lookup" class="button-primary-outlined" style="width:100%">View</button>
+            <div id="upload-section">
+                <div id="specific-upload">
+                    <div>data uploaded:</div>
+                    <div class="content" class="timestamp-date" id="timestamp-date">[timestamp]</div>
+                    <div class="content" class="ipfs-hash" id="ipfs-hash">[ipfs hash]</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
